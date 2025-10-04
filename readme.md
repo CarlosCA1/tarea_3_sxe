@@ -35,7 +35,24 @@ Para obtener solo el nombre de los mismos:
 docker ps
 ````
 
-
 Ejemplo en terminal:
 
 ![Imagen](images/2.png)
+
+3. Crea un contenedor con el nombre 'dam_alp1'. ¿Como puedes acceder a él?
+
+Añadimos un "--name".
+
+````
+docker run -dit --name dam_alp1 alpine
+````
+
+Para acceder al contenedor, abrimos una consola interactiva (sh) dentro del contenedor llamado dam_alp1 que ya está en ejecución:
+````
+docker exec -it dam_alp1 sh
+````
+
+
+Ejemplo en terminal (se me olvidó capturar el primer comando del apartado):
+
+![Imagen](images/3.png)
