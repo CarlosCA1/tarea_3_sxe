@@ -80,4 +80,17 @@ Ejemplo en terminal:
 
 ![Imagen](images/6.png)
 
+5. Crea un contenedor con el nombre 'dam_alp2'. ¿Puedes hacer ping entre los contenedores?
 
+Creamos el contenedor dam_alp2. "Sleep infinity" mantiene el contenedor activo, si no este se detiene:
+````
+docker run -dit --name dam_alp2 alpine sleep infinity
+````
+
+A continuación comprobamos la ip de los contenedores con "ip addr" dentro de cada contenedor. Luego, accedemos a uno de ellos (dam_alp1) y hacemos ping al otro (dam_alp2):
+````
+docker exec -it dam_alp1 sh
+ping -c 4 (ip de dam_alp2)
+````
+
+![Imagen](images/8.png)
