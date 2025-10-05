@@ -93,10 +93,25 @@ docker exec -it dam_alp1 sh
 ping -c 4 (ip de dam_alp2)
 ````
 
+Ejemplo en terminal:
+
 ![Imagen](images/8.png)
 
 6. Sal del terminal, ¿que ocurrió con el contenedor?
 
 Todos los contenedores siguen en ejecución, ya que los hemos creado con la opción -d (detached mode), que ejecuta el contenedor en segundo plano.
 
+Ejemplo en terminal:
+
 ![Imagen](images/9.png)
+
+7. ¿Cuanta memoria en el disco duro ocupaste?
+
+Comprobando la información sobre el uso de espacio en disco de Docker:
+````
+docker system df
+````
+
+Ejemplo en terminal:
+
+![Imagen](images/10.png)
