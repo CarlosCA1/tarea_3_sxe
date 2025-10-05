@@ -107,7 +107,7 @@ Ejemplo en terminal:
 
 7. ¿Cuanta memoria en el disco duro ocupaste?
 
-Comprobando la información sobre el uso de espacio en disco de Docker:
+Comprobando la información sobre el uso de espacio en disco de Docker (size):
 ````
 docker system df
 ````
@@ -115,3 +115,15 @@ docker system df
 Ejemplo en terminal:
 
 ![Imagen](images/10.png)
+
+8. ¿Cuanta RAM ocupan los contenedores? ¿Hay algún comando docker para saber esto?
+
+Sí (MEM USAGE):
+
+````
+docker stats
+````
+
+Ejemplo en terminal:
+
+![Imagen](images/11.png)
