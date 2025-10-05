@@ -94,3 +94,9 @@ ping -c 4 (ip de dam_alp2)
 ````
 
 ![Imagen](images/8.png)
+
+6. Sal del terminal, ¿que ocurrió con el contenedor?
+
+Todos los contenedores siguen en ejecución, ya que los hemos creado con la opción -d (detached mode), que ejecuta el contenedor en segundo plano.
+
+![Imagen](images/9.png)
