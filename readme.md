@@ -32,7 +32,7 @@ docker ps
 
 Para obtener solo el nombre de los mismos:
 ````
-docker ps
+docker ps --format "{{.Names}}"
 ````
 
 Ejemplo en terminal:
@@ -47,12 +47,37 @@ Añadimos un "--name".
 docker run -dit --name dam_alp1 alpine
 ````
 
-Para acceder al contenedor, abrimos una consola interactiva (sh) dentro del contenedor llamado dam_alp1 que ya está en ejecución:
+Para acceder al contenedor, abrimos una consola interactiva (sh) dentro del contenedor llamado dam_alp1 que ya está en ejecución. El contenedor se ejecuta en primer plano (la consola se “mete” directamente dentro del contenedor):
 ````
 docker exec -it dam_alp1 sh
 ````
 
 
-Ejemplo en terminal (se me olvidó capturar el primer comando del apartado):
+Ejemplo en terminal (olvidé capturar el primer comando del apartado):
 
 ![Imagen](images/3.png)
+![Imagen](images/5.png)
+
+4. Comprueba que ip tiene y si puedes hacer un ping a google.com.
+
+Comprobar ip (dentro del contenedor). En este caso, sería 127.17.0.3:
+
+````
+ip addr
+````
+
+Ping con google.com (dentro del contenedor):
+
+-c 4: envía 4 paquetes y se detiene automáticamente. Si funciona, veremos respuestas con el tiempo de ida y vuelta (ms).
+
+````
+ping -c 4 google.com
+````
+
+Ejemplo en terminal:
+
+![Imagen](images/4.png)
+
+![Imagen](images/6.png)
+
+
